@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selectors & Visual Rules Cheatsheet</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--Header-->
+        <nav class="nav">
+            <ul>
+                <li><a href="#ruleset">Definitions</a></li>
+                <li><a href="#selectors">Selectors</a></li>
+                <li><a href="#visualrules">Visual Rules</a></li>
+            </ul>
+        </nav>
+
+        <!--Banner-->
+        <div class="banner">
+            <h2>Ryan Staebell's Coding Cheatsheets</h2>
+            <h1>CSS Selectors & Visual Rules</h1>
+        </div>
+
+        <!--Ruleset Terms-->
+        <div id="ruleset">
+            <h2 class="section">Ruleset Terms</h2>
+            <table>
+                <tr class="tableheadings">
+                    <th scope="col">Term</th>
+                    <th scope="col">Definition</th>
+                    <th scope="col">Example</th>
+                </tr>
+                <tr>
+                    <td>Selector</td>
+                    <td>The beginning of the ruleset used to target the element that will be styled.</td>
+                    <td><span class='code'>.classname </span> (to select a class called "classname" </td>
+                </tr>
+                <tr>
+                    <td>Declaration Block</td>
+                    <td>The code between (and including) the curly braces {} that contains the CSS declaration(s)</td>
+                    <td><span class='code'>{color:blue;} </span></td>
+                </tr>
+                <tr>
+                    <td>Declaration</td>
+                    <td>The group name for a property and value pair that applies a style to the selected element.</td>
+                    <td><span class='code'>color:blue; </span> (includes the property and the value)</td>
+                </tr>
+                <tr>
+                    <td>Property</td>
+                    <td>The first part of the declaration that signifies what visual characteristic of the element is to be modified.</td>
+                    <td><span class='code'>color: </span> (in color:blue;)</td>
+                </tr>
+                <tr>
+                    <td>Value</td>
+                    <td>The second part of the declaration that signifies the value of the property.</td>
+                    <td><span class='code'>blue; </span> (in color:blue;)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Selectors-->
+        
+        <div id="selectors">
+            <h2 class="section">Selectors - Selectors are used to target the specific HTML element(s) that will be styled by CSS.</h2>
+        
+            <table>
+                <tr class="tableheadings">
+                    <th scope="col">Selector type</th>
+                    <th scope="col">Selective action</th>
+                    <th scope="col">Example</th>
+                </tr>
+                <tr>
+                    <td>Universal Selector</td>
+                    <td>Selects all elements of any type using the " * " character.</td>
+                    <td><span class='code'>* {} </span> selects all elements of the page. </td>
+                </tr>
+                <tr>
+                    <td>Element Selector</td>
+                    <td>Selects a general HTML element by simply using the name of the element w/o angled brackets</td>
+                    <td><span class='code'>h1 {} </span> selects all h1 headings. </td>
+                </tr>
+                <tr>
+                    <td>Class Selector</td>
+                    <td>Selects HTML with matching defined class attributes using a period followed by the class name. Classes are meant to be used/reused over many elements. IDs override the styles of types and classes, thus should be used sparingly and only on elements that need to always appear the same.</td>
+                    <td><span class='code'>.tableheadings {} </span>is used to select a "class="tableheadings" defined section of HTML code. </td>
+                </tr>
+                <tr>
+                    <td>ID Selector</td>
+                    <td>Used to select a single specific element for unique styling; can only be used once per page. Uses " # " as a selector.</td>
+                    <td><span class='code'>#picture1 </span> is used to select a specific picture subtitle called "picture1"</td>
+                </tr>
+                <tr>
+                    <td>Attribute Selector</td>
+                    <td>Used to select attributes within an HTML element to eliminate the need for new code like class or id for elements w/ specific attributes. Uses the attribute name surrounded by brackets as the selector and can get increasingly specific by adding type or specific attribute values.</td>
+                    <td><span class='code'>img [src*='winter'] {} </span> selects an img element with an attribute of src that contains the string "winter".</td>
+                </tr>
+                <tr>
+                    <td>Pseudo-class</td>
+                    <td>Used to give elements a different style based on user interaction, site navigation, or position in the document. Pseudo-classes include hover, focus, visited, disabled, and active. A pseduo-class can be attached to any selector and is written as a " : " followed by a name</td>
+                    <td><span class='code'>p:hover {background-color: lime;} </span> <span class='hover'>would change the background of the paragraph to lime color when a mouse hovers over it...like this paragraph does!</span></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!--Visual Rules-->
+
+        <div id="visualrules">
+            <h2 class="section">Visual Rules - Below are some examples of CSS visual rules</h2>
+            <table>
+                <tr class="tableheadings">
+                    <th scope="col">Rule</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Example</th>
+                </tr>
+                <tr>
+                    <td>Font-family</td>
+                    <td>Changes the typeface of the text on your web page</td>
+                    <td><span class='code'>font-family: "Brush Script MT";</span><br><span id="brushscript">changes the font to THIS elegant font!</span></td>
+                </tr>
+                <tr>
+                    <td>Font-size</td>
+                    <td>Changes the size of the text.</td>
+                    <td><span class='code'>font-size: 35px; </span> <span id="size"><br>changes text size to 35 pixels</span></td>
+                </tr>
+                <tr>
+                    <td>Font-weight</td>
+                    <td>Controls how bold or thin a text appears. Can be an integer (typical increments of 100) between 1 (lightest) and 1000 (boldest) OR words "bold", "bolder", "normal", "light", or "lighter"</td>
+                    <td><span class='code'>font-weight:1; OR font-weight: 1000;</span><br><span id="lightest">Lightest</span> versus <span id="darkest">Boldest</span></td>
+                </tr>
+                <tr>
+                    <td>Text-align</td>
+                    <td>Aligns text respective to the element that holds it (parent element) with values including "left", "center", "right", and "justify" (spaces out text in order to align with the right and left side of the parent element</td>
+                    <td id="center"><span class='code'>text-align: center</span><br>Center Alignment</td>
+                </tr>
+                <tr>
+                    <td>Attribute Selector</td>
+                    <td>Used to select attributes within an HTML element to eliminate the need for new code like class or id for elements w/ specific attributes. Uses the attribute name surrounded by brackets as the selector and can get increasingly specific by adding type or specific attribute values.</td>
+                    <td><span class='code'>img [src*='winter'] {} </span> selects an img element with an attribute of src that contains the string "winter".</td>
+                </tr>
+                <tr>
+                    <td>Pseudo-class</td>
+                    <td>Used to give elements a different style based on user interaction, site navigation, or position in the document. Pseudo-classes include hover, focus, visited, disabled, and active. A pseduo-class can be attached to any selector and is written as a " : " followed by a name</td>
+                    <td><span class=code>p:hover {background-color: lime;} </span> <span class="hover">would change the background of the paragraph to lime color when a mouse hovers over it...like this paragraph does!</span></td>
+                </tr>
+            </table>
+        </div>
+    
+
+        <footer>
+
+        </footer>
+        
+    </body>
+</html>
