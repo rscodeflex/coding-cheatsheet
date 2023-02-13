@@ -31,3 +31,5 @@ You can use these same columns or choose your own.
 3.Your site should utilize a custom color scheme. You can use any of the named CSS colors.
 
 4.Your site should use custom styles for any code such as HTML tags (like <h1>) or CSS properties or values (like font-family). Represent code using a monospace font family and a different background color.
+
+  
