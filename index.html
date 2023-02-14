@@ -136,21 +136,26 @@
                     <td id="center"><span class='code'>text-align: center</span><br>Center Alignment</td>
                 </tr>
                 <tr>
-                    <td>Attribute Selector</td>
-                    <td>Used to select attributes within an HTML element to eliminate the need for new code like class or id for elements w/ specific attributes. Uses the attribute name surrounded by brackets as the selector and can get increasingly specific by adding type or specific attribute values.</td>
-                    <td><span class='code'>img [src*='winter'] {} </span> selects an img element with an attribute of src that contains the string "winter".</td>
+                    <td>Color and Background Color</td>
+                    <td>Foreground color is the color than an element appears in (uses color:) and background color is the background of the element (uses background-color:)</td>
+                    <td id="color"><span class='code'>color: white; background-color: black; </span id="color"> changes the element text color to white and the background element color to black</td>
                 </tr>
                 <tr>
-                    <td>Pseudo-class</td>
-                    <td>Used to give elements a different style based on user interaction, site navigation, or position in the document. Pseudo-classes include hover, focus, visited, disabled, and active. A pseduo-class can be attached to any selector and is written as a " : " followed by a name</td>
-                    <td><span class=code>p:hover {background-color: lime;} </span> <span class="hover">would change the background of the paragraph to lime color when a mouse hovers over it...like this paragraph does!</span></td>
+                    <td>Opacity</td>
+                    <td>How transparent an element is (0 to 1 w/ 1 representing 100% visibility). Often used for overlay effect and fading elements into others (uses opacity:)</td>
+                    <td><span class=code>opacity: 0.5; </span> <span id="opacity">changes the background color to moderately transparent</span></td>
+                </tr>
+                <tr>
+                    <td>Background Image</td>
+                    <td>Sets the background of a specific element</td>
+                    <td id="flag"><span class=code>background-image: url(www.americanflagimage.com);</span>Changes the background of this element to an american flag.</td>
                 </tr>
             </table>
         </div>
     
 
         <footer>
-
+            <p>Ryan Staebell - February 2023</p>
         </footer>
         
     </body>
